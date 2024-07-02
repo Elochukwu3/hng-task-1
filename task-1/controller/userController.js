@@ -6,7 +6,7 @@ const getUser = async (req, res) => {
 
 
     if (!visitor_name) {
-        return res.send("name is required")
+        return res.send("Hey name is required")
     }
 
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
