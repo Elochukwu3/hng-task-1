@@ -1,5 +1,4 @@
 const express = require('express');
-const ipMiddleware = require('./middleware/ipFunction');
 const route = require('./routes/index');
 
 const app = express();
@@ -11,7 +10,7 @@ app.use((req, res, next) => {
     next();
 })
 // app.use(ipMiddleware);
-app.use('/api', route)
+app.use('/', route)
 
 app.listen(port, ()=>{
     console.log(`listening on ${port}`);
